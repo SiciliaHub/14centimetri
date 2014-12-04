@@ -31,7 +31,13 @@
         attribution: "Regione Siciliana Assessorato Territorio e Ambiente",
         minZoom: 15,
         maxZoom: 20
-    });   
+    });
+    
+    var sitr2 = L.tileLayer("http://map.sitr.regione.sicilia.it/ArcGIS/rest/services/CACHED/ortofoto_ata20072008_webmercatore/MapServer/tile/{z}/{y}/{x}.jpg", {
+        attribution: "Regione Siciliana Assessorato Territorio e Ambiente",
+        minZoom: 15,
+        maxZoom: 20
+    }); 
 
     var realvista = L.tileLayer.wms("http://213.215.135.196/reflector/open/service?", {
         layers: 'rv1',
@@ -54,7 +60,7 @@
 
 
     var map2 = L.map('map2', {
-        layers: [realvista],
+        layers: [sitr2],
         center: center,
         zoom: zoom,
         minZoom: 15,
